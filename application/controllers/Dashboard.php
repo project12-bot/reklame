@@ -18,11 +18,11 @@ class Dashboard extends CI_Controller {
         $role = $this->session->userdata('role');
 
         if($role == 'admin'){
-            $this->load->view('templates/header');
-            $this->load->view('templates/sidebar');
-            $this->load->view('templates/topbar');
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('template/topbar');
             $this->load->view('dashboard/admin');
-            $this->load->view('templates/footer');
+            $this->load->view('template/footer');
         }
         elseif($role == 'produksi'){
             $this->load->view('dashboard/produksi');
